@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jobs Well Done | LawnWorx LLC | Pasco County Lawn Care</title>
+  <meta name="description" content="See completed lawn care work by LawnWorx LLC across Pasco County FL. Mowing, mulch, fertilizing, brush clearing, and hedge trimming — sharp results every time.">
+  <link rel="canonical" href="https://lawnworxfl.com/jobs-well-done">
+  <meta property="og:title" content="Jobs Well Done | LawnWorx LLC">
+  <meta property="og:description" content="Completed lawn care work by LawnWorx LLC across Zephyrhills, Dade City, San Antonio, Wesley Chapel, Mirada, and Epperson FL.">
+  <meta property="og:url" content="https://lawnworxfl.com/jobs-well-done">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* ── Page-specific styles for Jobs Well Done ── */
+    .jobs-hero {
+      min-height: 52vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(rgba(14,30,14,0.78), rgba(14,30,14,0.78)),
+        url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      padding: 60px 24px;
+    }
+    .jobs-hero h1 { margin-bottom: 14px; }
+    .jobs-hero p {
+      font-size: 1rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    /* Filter Tabs */
+    .filter-tabs {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .filter-tab {
+      background: none;
+      border: 1px solid rgba(200,150,15,0.35);
+      color: var(--cream);
+      padding: 8px 22px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      cursor: pointer;
+      transition: var(--transition);
+      border-radius: 2px;
+    }
+    .filter-tab:hover,
+    .filter-tab.active {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--dark-forest);
+    }
+
+    /* Photo Grid */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+    @media (max-width: 1024px) {
+      .photo-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .photo-grid { grid-template-columns: 1fr; }
+    }
+
+    .photo-card {
+      background: var(--moss);
+      overflow: hidden;
+      border-radius: 4px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .photo-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.5);
+    }
+    .photo-card img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .photo-card:hover img { transform: scale(1.04); }
+    .photo-card-label { padding: 18px 22px; }
+    .photo-card-label h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.35rem;
+      color: var(--gold);
+      margin-bottom: 3px;
+      letter-spacing: 1px;
+    }
+    .photo-card-label p {
+      font-size: 0.82rem;
+      opacity: 0.6;
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    /* CTA Strip */
+    .cta-strip {
+      background: var(--moss);
+      border-top: 3px solid var(--gold);
+      margin-top: 60px;
+      padding: 50px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    .cta-strip h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      color: var(--white);
+      line-height: 1;
+    }
+    .cta-strip h3 span { color: var(--gold); }
+    .cta-strip p { opacity: 0.75; margin-top: 8px; }
+    @media (max-width: 768px) {
+      .cta-strip { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">LawnWorx LLC</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li class="dropdown">
+        <button class="dropbtn">Locations &#9660;</button>
+        <div class="dropdown-content">
+          <a href="zephyrhills.html">Zephyrhills</a>
+          <a href="dade-city.html">Dade City</a>
+          <a href="san-antonio.html">San Antonio</a>
+          <a href="wesley-chapel.html">Wesley Chapel</a>
+          <a href="mirada.html">Mirada</a>
+          <a href="epperson.html">Epperson</a>
+        </div>
+      </li>
+      <li><a href="jobs-well-done.html">Jobs Well Done</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-mobile" id="navMobile">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <div class="mobile-sub-label">Locations</div>
+      <a href="zephyrhills.html" class="sub-link">Zephyrhills</a>
+      <a href="dade-city.html" class="sub-link">Dade City</a>
+      <a href="san-antonio.html" class="sub-link">San Antonio</a>
+      <a href="wesley-chapel.html" class="sub-link">Wesley Chapel</a>
+      <a href="mirada.html" class="sub-link">Mirada</a>
+      <a href="epperson.html" class="sub-link">Epperson</a>
+      <a href="jobs-well-done.html">Jobs Well Done</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="jobs-hero">
+    <h1>Jobs <span style="color:var(--gold)">Well Done</span></h1>
+    <p>Our Work Across Pasco County</p>
+  </header>
+
+  <!-- PHOTO SECTION -->
+  <section>
+    <div class="container">
+      <h2>The Work <span>Speaks</span></h2>
+      <p style="opacity:0.75; margin-bottom:44px; max-width:680px;">Every yard we touch gets the same standard — sharp edges, clean cuts, and a lawn the neighbors notice. Here's a sample of what we deliver week after week across East Pasco County.</p>
+
+      <div class="filter-tabs">
+        <button class="filter-tab active" data-filter="all">All Jobs</button>
+        <button class="filter-tab" data-filter="mowing">Mowing</button>
+        <button class="filter-tab" data-filter="hedge">Hedge Trimming</button>
+        <button class="filter-tab" data-filter="mulch">Mulch</button>
+        <button class="filter-tab" data-filter="fertilizing">Fertilizing</button>
+      </div>
+
+      <div class="photo-grid">
+
+        <!-- 1: Weekly mow action shot — man on mower, Florida flat yard -->
+        <div class="photo-card" data-category="mowing">
+          <img src="https://images.pexels.com/photos/6728933/pexels-photo-6728933.jpeg?auto=compress&cs=tinysrgb&w=700&h=525&fit=crop"
+               alt="Man operating lawn mower on green residential lawn in Pasco County FL" loading="lazy">
+          <div class="photo-card-label">
+            <h3>Weekly Mow — Silver Oaks</h3>
+            <p>Zephyrhills, FL</p>
+          </div>
+        </div>
+
+        <!-- 2: Hedge trimming action, close-up -->
+        <div class="photo-card" data-category="hedge">
+          <img src="https://images.pexels.com/photos/7813043/pexels-photo-7813043.jpeg?auto=compress&cs=tinysrgb&w=700&h=525&fit=crop"
+               alt="Hedge trimming with power tool — clean lines on residential shrubs" loading="lazy">
+          <div class="photo-card-label">
+            <h3>Hedge Trimming</h3>
+            <p>Wesley Chapel, FL</p>
+          </div>
+        </div>
+
+        <!-- 3: Freshly cut flat green Florida lawn — close crop, no horizon -->
+        <div class="photo-card" data-category="mowing">
+          <img src="https://images.pexels.com/photos/1453499/pexels-photo-1453499.jpeg?auto=compress&cs=tinysrgb&w=700&h=525&fit=crop"
+               alt="Fresh mow lines on manicured St. Augustine lawn in Epperson Wesley Chapel" loading="lazy">
+          <div class="photo-card-label">
+            <h3>Fresh-Cut Floratam</h3>
+            <p>Epperson, Wesley Chapel</p>
+          </div>
+        </div>
+
+        <!-- 4: Hedge / bush trimming — power tool close-up, no background -->
+        <div class="photo-card" data-category="hedge">
+          <img src="https://images.pexels.com/photos/24595769/pexels-photo-24595769.jpeg?auto=compress&cs=tinysrgb&w=700&h=525&fit=crop"
+               alt="Hedge cutting with trimmer machine — shaped bushes in Dade City FL" loading="lazy">
+          <div class="photo-card-label">
+            <h3>Hedge &amp; Bush Shaping</h3>
+            <p>Dade City, FL</p>
+          </div>
+        </div>
+
+        <!-- 5: Lush dark-green manicured lawn close-up — no horizon, flat Florida -->
+        <div class="photo-card" data-category="mowing">
+          <img src="https://images.pexels.com/photos/1108701/pexels-photo-1108701.jpeg?auto=compress&cs=tinysrgb&w=700&h=525&fit=crop"
+               alt="Lush manicured green lawn after weekly mowing service — Mirada San Antonio FL" loading="lazy">
+          <div class="photo-card-label">
+            <h3>Curb Appeal Mow</h3>
+            <p>Mirada, San Antonio FL</p>
+          </div>
+        </div>
+
+        <!-- 6: Mulch installation in garden beds, close-up -->
+        <div class="photo-card" data-category="mulch">
+          <img src="https://images.pexels.com/photos/2132250/pexels-photo-2132250.jpeg?auto=compress&cs=tinysrgb&w=700&h=525&fit=crop"
+               alt="Fresh mulch installation in garden beds — clean edges in Dade City FL" loading="lazy">
+          <div class="photo-card-label">
+            <h3>Fresh Mulch Install</h3>
+            <p>Lake Jovita, Dade City</p>
+          </div>
+        </div>
+
+        <!-- 7: Bright green flat grass — close-up, no background horizon -->
+        <div class="photo-card" data-category="mowing">
+          <img src="https://images.pexels.com/photos/209983/pexels-photo-209983.jpeg?auto=compress&cs=tinysrgb&w=700&h=525&fit=crop"
+               alt="Bright green freshly mowed St. Augustine grass lawn in Pasco County FL" loading="lazy">
+          <div class="photo-card-label">
+            <h3>Full-Service Weekly</h3>
+            <p>Forest Lake, Zephyrhills</p>
+          </div>
+        </div>
+
+        <!-- 8: Green grass after fertilizing — close-up blades, no mountain horizon -->
+        <div class="photo-card" data-category="fertilizing">
+          <img src="https://images.pexels.com/photos/1301856/pexels-photo-1301856.jpeg?auto=compress&cs=tinysrgb&w=700&h=525&fit=crop"
+               alt="Healthy thick green grass after fertilizing service in Zephyrhills FL" loading="lazy">
+          <div class="photo-card-label">
+            <h3>Fertilized &amp; Healthy</h3>
+            <p>Sandy Ridge, Zephyrhills</p>
+          </div>
+        </div>
+
+        <!-- 9: Mulch and bed landscaping — garden close-up, flat yard -->
+        <div class="photo-card" data-category="mulch">
+          <img src="https://images.pexels.com/photos/349506/pexels-photo-349506.jpeg?auto=compress&cs=tinysrgb&w=700&h=525&fit=crop"
+               alt="Clean landscaped yard with mulch beds and edged borders in Pasco County FL" loading="lazy">
+          <div class="photo-card-label">
+            <h3>Mulch &amp; Bed Work</h3>
+            <p>Valleydale, Zephyrhills</p>
+          </div>
+        </div>
+
+        <!-- 10: Lawn mowing action — riding mower on flat grass -->
+        <div class="photo-card" data-category="mowing">
+          <img src="https://images.pexels.com/photos/5230804/pexels-photo-5230804.jpeg?auto=compress&cs=tinysrgb&w=700&h=525&fit=crop"
+               alt="Riding mower on flat green residential lawn in San Antonio FL" loading="lazy">
+          <div class="photo-card-label">
+            <h3>Precision Weekly Mow</h3>
+            <p>Cypress Creek, San Antonio</p>
+          </div>
+        </div>
+
+        <!-- 11: Lawn edging close-up — crisp edge line, no background -->
+        <div class="photo-card" data-category="mowing">
+          <img src="https://images.pexels.com/photos/6231714/pexels-photo-6231714.jpeg?auto=compress&cs=tinysrgb&w=700&h=525&fit=crop"
+               alt="Precision lawn edging along driveway in Epperson Wesley Chapel FL" loading="lazy">
+          <div class="photo-card-label">
+            <h3>Driveway Edge Work</h3>
+            <p>Epperson, Wesley Chapel</p>
+          </div>
+        </div>
+
+        <!-- 12: Dense green Floratam grass — very close, no horizon -->
+        <div class="photo-card" data-category="fertilizing">
+          <img src="https://images.pexels.com/photos/1426748/pexels-photo-1426748.jpeg?auto=compress&cs=tinysrgb&w=700&h=525&fit=crop"
+               alt="Dense healthy Floratam St. Augustine grass after fertilizing in Pasco County FL" loading="lazy">
+          <div class="photo-card-label">
+            <h3>Dense &amp; Green</h3>
+            <p>Mirada, San Antonio FL</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="cta-strip">
+        <div>
+          <h3>Want a Yard That <span>Looks Like This?</span></h3>
+          <p>Call us at (352) 206-6203 — we'll give you a free estimate for your property.</p>
+        </div>
+        <a href="tel:3522066203" class="btn-gold">Call Now: (352) 206-6203</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="zephyrhills.html">Zephyrhills</a>
+      <a href="dade-city.html">Dade City</a>
+      <a href="san-antonio.html">San Antonio</a>
+      <a href="wesley-chapel.html">Wesley Chapel</a>
+      <a href="mirada.html">Mirada</a>
+      <a href="epperson.html">Epperson</a>
+      <a href="jobs-well-done.html">Jobs Well Done</a>
+    </div>
+    <p>LawnWorx LLC &nbsp;|&nbsp; (352) 206-6203 &nbsp;|&nbsp; Licensed &amp; Insured &nbsp;|&nbsp; Serving Pasco County Since 2018</p>
+    <p class="footer-service-areas">Zephyrhills &bull; Dade City &bull; San Antonio &bull; Wesley Chapel &bull; Mirada &bull; Epperson</p>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    const tabs = document.querySelectorAll('.filter-tab');
+    const cards = document.querySelectorAll('.photo-card');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+        tabs.forEach(t => t.classList.remove('active'));
+        this.classList.add('active');
+        const filter = this.dataset.filter;
+        cards.forEach(card => {
+          card.style.display = (filter === 'all' || card.dataset.category === filter) ? '' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>

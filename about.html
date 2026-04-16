@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About LawnWorx LLC | Pasco County Lawn Care Since 2018</title>
+    <meta name="description" content="LawnWorx LLC has been serving Pasco County homeowners since 2018. Licensed and insured lawn care professionals specializing in mowing, weed eating, mulch, fertilizing, and brush clearing.">
+    <link rel="canonical" href="https://lawnworxfl.com/about">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --gold: #c8960f; --dark-forest: #0e1e0e; --moss: #1a3a1a; --cream: #f5f0e8; --white: #ffffff; --transition: all 0.3s ease; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'DM Sans', sans-serif; background: var(--dark-forest); color: var(--cream); line-height: 1.8; overflow-x: hidden; }
+
+        nav { position: sticky; top: 0; width: 100%; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 5%; background: var(--dark-forest); border-bottom: 1px solid rgba(200,150,15,0.2); }
+        .nav-links { display: flex; gap: 3rem; list-style: none; align-items: center; }
+        .nav-links a, .dropbtn { color: var(--cream); text-decoration: none; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 3.5px; transition: var(--transition); background: none; border: none; cursor: pointer; font-family: inherit; }
+        .nav-links a:hover, .dropdown:hover .dropbtn { color: var(--gold); }
+        .dropdown { position: relative; display: inline-block; }
+        .dropdown-content { display: none; position: absolute; background-color: var(--moss); min-width: 220px; box-shadow: 0px 8px 16px rgba(0,0,0,0.5); z-index: 1; border: 1px solid var(--gold); top: 100%; }
+        .dropdown-content a { color: var(--cream); padding: 12px 16px; text-decoration: none; display: block; font-size: 0.75rem; letter-spacing: 1.5px; text-transform: uppercase; }
+        .dropdown-content a:hover { background-color: var(--dark-forest); color: var(--gold); }
+        .dropdown:hover .dropdown-content { display: block; }
+        .hamburger { display: none; flex-direction: column; justify-content: center; gap: 6px; background: none; border: none; cursor: pointer; padding: 4px; }
+        .hamburger span { display: block; width: 26px; height: 2px; background: var(--cream); border-radius: 2px; transition: var(--transition); }
+        .nav-mobile { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: var(--dark-forest); border-bottom: 2px solid var(--gold); padding: 10px 5% 20px; z-index: 999; }
+        .nav-mobile.open { display: block; }
+        .nav-mobile a { display: block; color: var(--cream); text-decoration: none; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; padding: 14px 0; border-bottom: 1px solid rgba(200,150,15,0.15); }
+        .nav-mobile a:last-child { border-bottom: none; }
+        .mobile-sub-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; color: var(--gold); padding: 14px 0 4px; border-bottom: 1px solid rgba(200,150,15,0.15); }
+        .nav-mobile .sub-link { padding-left: 20px; font-size: 0.78rem; }
+
+        .page-header { height: 45vh; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(rgba(14,30,14,0.85), rgba(14,30,14,0.85)), url('https://lawnworxfl.com/wp-content/uploads/2026/04/lawnworx-69d4fcec0de21.png'); background-size: cover; background-position: center; text-align: center; padding: 20px; }
+        .page-header h1 { font-family: 'Bebas Neue', sans-serif; font-size: 5.5rem; line-height: 0.9; letter-spacing: 2px; }
+        .page-header h1 span { color: var(--gold); }
+        .page-header p { font-size: 1.1rem; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-top: 15px; }
+
+        section { padding: 100px 10%; }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+        h2 { font-family: 'Bebas Neue', sans-serif; font-size: 4rem; color: var(--white); margin-bottom: 25px; line-height: 1; }
+        h2 span { color: var(--gold); }
+        p { margin-bottom: 25px; font-size: 1.15rem; opacity: 0.9; }
+
+        .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 60px; }
+        .stat-card { background: var(--moss); border-left: 4px solid var(--gold); padding: 30px; text-align: center; }
+        .stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; color: var(--gold); line-height: 1; }
+        .stat-label { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; margin-top: 8px; opacity: 0.8; }
+
+        .services-list { background: var(--moss); border-left: 5px solid var(--gold); padding: 40px; }
+        .services-list h3 { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--gold); margin-bottom: 20px; }
+        .services-list ul { list-style: none; }
+        .services-list li { padding: 10px 0; border-bottom: 1px solid rgba(200,150,15,0.15); font-size: 1.05rem; }
+        .services-list li:last-child { border-bottom: none; }
+        .services-list li::before { content: '✔  '; color: var(--gold); font-weight: bold; }
+
+        footer { padding: 60px 10%; background: #050a05; text-align: center; border-top: 1px solid var(--gold); }
+        .footer-nav { margin-bottom: 30px; display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; }
+        .footer-nav a { color: var(--gold); text-decoration: none; font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        @media (max-width: 992px) {
+            .about-grid { grid-template-columns: 1fr; }
+            .stat-grid { grid-template-columns: 1fr 1fr; }
+            .page-header h1 { font-size: 3.5rem; }
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            nav { position: relative; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+                <button class="dropbtn">Locations ▼</button>
+                <div class="dropdown-content">
+                    <a href="zephyrhills.html">Zephyrhills</a>
+                    <a href="dade-city.html">Dade City</a>
+                    <a href="san-antonio.html">San Antonio</a>
+                    <a href="wesley-chapel.html">Wesley Chapel</a>
+                </div>
+            </li>
+            
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-mobile" id="navMobile">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <div class="mobile-sub-label">Locations</div>
+            <a href="zephyrhills.html" class="sub-link">Zephyrhills</a>
+            <a href="dade-city.html" class="sub-link">Dade City</a>
+            <a href="san-antonio.html" class="sub-link">San Antonio</a>
+            <a href="wesley-chapel.html" class="sub-link">Wesley Chapel</a>
+            
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>About <span>LawnWorx</span></h1>
+        <p>Serving Pasco County Since 2018</p>
+    </header>
+
+    <section>
+        <div class="about-grid">
+            <div>
+                <h2>Built on <span>Showing Up</span></h2>
+                <p>LawnWorx LLC started in 2018 with a simple idea: show up on time, do the work right, and treat every yard like it matters. That idea hasn't changed. We've grown by earning the trust of homeowners across East Pasco County one property at a time.</p>
+                <p>We're a locally owned, licensed, and insured lawn care company serving Zephyrhills, Dade City, San Antonio, and Wesley Chapel. Our crews handle everything from weekly mowing and weed eating to mulch installation, lawn fertilizing, and brush clearing, and hedge trimming.</p>
+                <p>We specialize in HOA communities where consistency and standards matter — and we've maintained a 100% HOA compliance record across every property we service. When we leave your yard, every edge is sharp, every clipping is cleared, and every gate is secured.</p>
+                <p>Ready to get started? Call us at <strong>(352) 206-6203</strong> or browse our service areas below.</p>
+            </div>
+            <div class="services-list">
+                <h3>What We Do</h3>
+                <ul>
+                    <li>Lawn Mowing</li>
+                    <li>Weed Eating &amp; Trimming</li>
+                    <li>Precision Edging</li>
+                    <li>Mulch Installation</li>
+                    <li>Lawn Fertilizing</li>
+                    <li>Brush Clearing &amp; Hedge Trimming</li>
+                    <li>HOA Compliance Care</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="stat-grid">
+            <div class="stat-card">
+                <div class="stat-num">2018</div>
+                <div class="stat-label">In Business Since</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-num">4</div>
+                <div class="stat-label">Service Areas</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-num">100%</div>
+                <div class="stat-label">HOA Compliance Record</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="zephyrhills.html">Zephyrhills</a>
+            <a href="dade-city.html">Dade City</a>
+            <a href="san-antonio.html">San Antonio</a>
+            <a href="wesley-chapel.html">Wesley Chapel</a>
+        </div>
+        <p>LawnWorx LLC | (352) 206-6203 | Licensed &amp; Insured</p>
+        <p style="opacity: 0.6; margin-top: 10px; font-size: 0.75rem;">Serving Pasco County since 2018.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMobile = document.getElementById('navMobile');
+        hamburger.addEventListener('click', function() {
+            const isOpen = navMobile.classList.toggle('open');
+            hamburger.setAttribute('aria-expanded', isOpen);
+        });
+    </script>
+</body>
+</html>
