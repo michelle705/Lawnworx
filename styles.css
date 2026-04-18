@@ -13,7 +13,7 @@
   --cream: #f5f0e8;
   --white: #ffffff;
   --ink: #050a05;
-  --transition: all 0.3s ease;
+  --transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
   --shadow-md: 0 8px 30px rgba(0,0,0,0.4);
   --shadow-lg: 0 20px 60px rgba(0,0,0,0.55);
 }
@@ -52,23 +52,27 @@ h1 {
   font-size: clamp(3rem, 8vw, 7rem);
   line-height: 0.95;
   letter-spacing: 1px;
+  text-wrap: balance;
 }
 h2 {
   font-family: 'Bebas Neue', sans-serif;
   font-size: clamp(2.4rem, 5vw, 4.5rem);
   line-height: 1;
   color: var(--white);
+  text-wrap: balance;
 }
 h2 span { color: var(--gold); }
 h3 {
   font-family: 'Bebas Neue', sans-serif;
   font-size: clamp(1.6rem, 3vw, 2.4rem);
   line-height: 1.1;
+  text-wrap: balance;
 }
 h4 {
   font-family: 'Bebas Neue', sans-serif;
   font-size: clamp(1.2rem, 2vw, 1.6rem);
   line-height: 1.2;
+  text-wrap: balance;
 }
 p {
   font-size: 1.05rem;
@@ -157,8 +161,11 @@ section { padding: 80px 0; }
   border: none;
   cursor: pointer;
   line-height: 1;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 .btn-gold:hover { background: var(--gold-light); }
+.btn-gold:focus-visible { outline: 3px solid var(--gold-light); outline-offset: 3px; }
 
 .btn-gold-lg {
   display: inline-block;
@@ -172,9 +179,27 @@ section { padding: 80px 0; }
   padding: 20px 48px;
   text-decoration: none;
   transition: var(--transition);
-  white-space: nowrap;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 .btn-gold-lg:hover { background: var(--gold-light); }
+.btn-gold-lg:focus-visible { outline: 3px solid var(--gold-light); outline-offset: 3px; }
+
+@media (max-width: 640px) {
+  .btn-gold, .btn-gold-lg {
+    white-space: normal;
+    text-align: center;
+    padding: 14px 24px;
+    display: block;
+    width: 100%;
+    max-width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-cta {
+    max-width: 280px;
+  }
+}
 
 /* --- Navigation --- */
 nav {
@@ -324,8 +349,14 @@ nav {
 @media (max-width: 1024px) {
   .nav-links { display: none; }
   .hamburger { display: flex; }
-  nav { position: relative; }
+  /* keep nav sticky — position: sticky already provides positioning context */
 }
+
+/* Hamburger open/close animation */
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.hamburger span { transition: transform 0.25s ease, opacity 0.25s ease; }
 
 /* --- Hero / Page Header --- */
 .hero {
@@ -441,17 +472,36 @@ nav {
 /* --- Service Cards --- */
 .service-card {
   background: var(--moss);
-  padding: 36px 28px;
   border-top: 4px solid var(--gold);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 .service-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
 }
+.service-card-img {
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  flex-shrink: 0;
+}
+.service-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.service-card:hover .service-card-img img { transform: scale(1.04); }
+.service-card-body {
+  padding: 28px 24px 32px;
+  flex: 1;
+}
 .service-card-icon {
-  font-size: 2.2rem;
-  margin-bottom: 16px;
+  font-size: 1.8rem;
+  margin-bottom: 12px;
   display: block;
 }
 .service-card h3 {
@@ -470,8 +520,28 @@ nav {
 /* --- Community Cards --- */
 .community-card {
   background: var(--moss);
-  padding: 28px 24px;
   border-left: 4px solid var(--gold);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.community-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+.community-card-img {
+  overflow: hidden;
+  aspect-ratio: 16/9;
+}
+.community-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.community-card:hover .community-card-img img { transform: scale(1.04); }
+.community-card-body {
+  padding: 22px 20px 24px;
 }
 .community-card h4 {
   font-family: 'Bebas Neue', sans-serif;
@@ -485,6 +555,18 @@ nav {
   opacity: 0.8;
   line-height: 1.65;
 }
+.card-link {
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: inline-block;
+  margin-top: 12px;
+  transition: var(--transition);
+}
+.card-link:hover { color: var(--gold-light); }
 
 /* --- FAQ Section --- */
 .faq-section { background: var(--moss-dark); }
@@ -777,4 +859,123 @@ footer {
 .cta-strip p { opacity: 0.75; margin-top: 8px; font-size: 1rem; }
 @media (max-width: 768px) {
   .cta-strip { flex-direction: column; text-align: center; }
+}
+
+/* --- Stats Bar --- */
+.stats-bar {
+  background: var(--ink);
+  border-top: 2px solid var(--gold);
+  border-bottom: 2px solid var(--gold);
+  padding: 32px 0;
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+}
+.stat-item { padding: 8px 0; }
+.stat-big {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  color: var(--gold);
+  line-height: 1;
+  display: block;
+  font-variant-numeric: tabular-nums;
+}
+.stat-desc {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.7;
+  margin-top: 6px;
+  display: block;
+  line-height: 1.4;
+}
+
+/* --- Image Divider --- */
+.img-divider {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 100px 24px;
+  text-align: center;
+  overflow: hidden;
+}
+.img-divider::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(14,30,14,0.72) 0%, rgba(5,10,5,0.85) 100%);
+}
+.img-divider-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.img-divider-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--gold);
+  margin-bottom: 16px;
+  opacity: 1;
+}
+.img-divider h2 {
+  margin-bottom: 32px;
+}
+@media (max-width: 768px) {
+  .img-divider { background-attachment: scroll; padding: 72px 24px; }
+}
+
+/* --- Focus visible styles --- */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* --- Reduced motion --- */
+@media (prefers-reduced-motion: reduce) {
+  .review-track { animation: none; }
+  .service-card,
+  .service-card-img img,
+  .community-card,
+  .community-card-img img,
+  .photo-card,
+  .photo-card img,
+  .hamburger span {
+    transition: none;
+  }
+  .service-card:hover,
+  .community-card:hover,
+  .photo-card:hover { transform: none; }
+  .service-card:hover .service-card-img img,
+  .community-card:hover .community-card-img img,
+  .photo-card:hover img { transform: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* --- Mobile touch targets --- */
+@media (max-width: 1024px) {
+  .nav-mobile a,
+  .footer-nav a {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* --- SVG Icons in service cards --- */
+.service-card-icon svg {
+  width: 40px;
+  height: 40px;
+  stroke: var(--gold);
+  display: block;
+  margin-bottom: 14px;
 }

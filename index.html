@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0e1e0e">
   <title>LawnWorx LLC | Lawn Mowing, Mulch &amp; Fertilizing | Pasco County FL</title>
   <meta name="description" content="LawnWorx LLC provides professional lawn mowing, weed eating, mulch installation, fertilizing, brush clearing, and hedge trimming for homes in Zephyrhills, Dade City, San Antonio, and Wesley Chapel, FL. Licensed &amp; Insured.">
   <link rel="canonical" href="https://lawnworxfl.com/">
@@ -11,6 +12,7 @@
   <meta property="og:url" content="https://lawnworxfl.com/">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
@@ -52,7 +54,7 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li class="dropdown">
-        <button class="dropbtn">Locations &#9660;</button>
+        <button class="dropbtn" aria-expanded="false" aria-haspopup="true">Locations &#9660;</button>
         <div class="dropdown-content">
           <a href="zephyrhills.html">Zephyrhills</a>
           <a href="dade-city.html">Dade City</a>
@@ -62,7 +64,7 @@
           <a href="epperson.html">Epperson</a>
         </div>
       </li>
-      
+      <li><a href="tel:3522066203" class="btn-gold" aria-label="Call LawnWorx at (352) 206-6203" style="padding:10px 20px; font-size:0.78rem;">&#128222; Call Now</a></li>
     </ul>
     <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -77,21 +79,21 @@
       <a href="wesley-chapel.html" class="sub-link">Wesley Chapel</a>
       <a href="mirada.html" class="sub-link">Mirada</a>
       <a href="epperson.html" class="sub-link">Epperson</a>
-      
+      <a href="tel:3522066203" class="sub-link" aria-label="Call LawnWorx at (352) 206-6203" style="color:var(--gold); font-size:1rem; margin-top:8px;">&#128222; (352) 206-6203</a>
     </div>
   </nav>
 
   <!-- HERO -->
-  <header class="hero" style="background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1600&q=80'); min-height: 75vh;">
+  <header class="hero" style="background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1600&q=80'); min-height: 80vh;">
     <div class="hero-logo-wrap">
-      <img src="Gemini_Generated_Image_arbyfearbyfearby.png" alt="LawnWorx LLC — Premium Lawn Care Pasco County FL">
+      <img src="Gemini_Generated_Image_arbyfearbyfearby.png" alt="LawnWorx LLC — Premium Lawn Care Pasco County FL" width="380" height="200" fetchpriority="high">
     </div>
     <p class="hero-tagline">Mowing &bull; Weed Eating &bull; Mulch &bull; Fertilizing &bull; Hedge Trimming</p>
-    <a href="tel:3522066203" class="btn-gold hero-cta">Call Now: (352) 206-6203</a>
+    <a href="tel:3522066203" class="btn-gold hero-cta" aria-label="Call LawnWorx at (352) 206-6203">Call Now: (352)&nbsp;206-6203</a>
   </header>
 
   <!-- REVIEW STRIP -->
-  <div class="review-strip">
+  <div class="review-strip" aria-label="Customer reviews" role="marquee">
     <div class="review-track">
       <span class="review-item">"Best lawn crew in Pasco County — always shows up on time." — Mike R. ★★★★★</span>
       <span class="review-item">"Finally a reliable crew in <b>Wesley Chapel</b>." — Sarah L. ★★★★★</span>
@@ -106,6 +108,30 @@
     </div>
   </div>
 
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-big">7+</span>
+          <span class="stat-desc">Years Serving Pasco County</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-big">6</span>
+          <span class="stat-desc">Service Areas</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-big">100%</span>
+          <span class="stat-desc">HOA Compliance Record</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-big">&#10003;</span>
+          <span class="stat-desc">Licensed &amp; Insured</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- SERVICES OVERVIEW -->
   <section>
     <div class="container">
@@ -115,8 +141,8 @@
           <h2>Full-Service <span>Lawn Care</span></h2>
           <p>At LawnWorx LLC, we handle every part of your yard — from the cut to the curb. Our crews provide <strong>precision mowing</strong>, clean <strong>weed eating and edging</strong>, <strong>mulch installation</strong>, <strong>lawn fertilizing</strong>, and <strong>brush clearing and hedge trimming</strong> for residential properties throughout East Pasco County.</p>
           <p>We serve the communities of Zephyrhills, Dade City, San Antonio, Wesley Chapel, Mirada, and Epperson with a commitment to HOA compliance, razor-sharp edging, and consistent weekly scheduling. Your lawn is your home's first impression — we make sure it's a gold-standard one.</p>
-          <p>Florida's subtropical climate means your St. Augustine or Bahia grass grows fast during the summer rainy season — sometimes two to three inches in a single week. That's why dependable weekly service isn't a luxury in Pasco County, it's a necessity. LawnWorx shows up when we say we will, every time.</p>
-          <a href="tel:3522066203" class="btn-gold" style="margin-top:16px;">Get a Free Quote</a>
+          <p>Florida's subtropical climate means your St.&nbsp;Augustine or Bahia grass grows fast during the summer rainy season — sometimes two to three inches in a single week. That's why dependable weekly service isn't a luxury in Pasco County, it's a necessity. LawnWorx shows up when we say we will, every time.</p>
+          <a href="tel:3522066203" class="btn-gold" style="margin-top:24px;" aria-label="Call for a free quote">Get a Free Quote</a>
         </div>
         <div class="highlight-box">
           <h3>Why LawnWorx?</h3>
@@ -140,76 +166,152 @@
       <span class="section-label text-center" style="display:block; text-align:center;">What We Do</span>
       <h2 style="text-align:center; margin-bottom:48px;">Our <span>Services</span></h2>
       <div class="service-cards">
+
         <div class="service-card">
-          <span class="service-card-icon">&#9986;</span>
-          <h3>Lawn Mowing</h3>
-          <p>Weekly and bi-weekly mowing with sharp, commercial-grade blades. We cut to the correct height for Floratam St. Augustine and Bahia to keep roots healthy and prevent scalping.</p>
+          <div class="service-card-img">
+            <img src="https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?auto=format&fit=crop&w=600&q=70" alt="Lawn mowing service — green Florida grass" width="600" height="340" loading="lazy">
+          </div>
+          <div class="service-card-body">
+            <span class="service-card-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="17" r="2"/><circle cx="19" cy="17" r="2"/><path d="M2 17H1V9l4-4h10l4 4v4"/><path d="M7 17h6"/><path d="M5 15V9"/></svg></span>
+            <h3>Lawn Mowing</h3>
+            <p>Weekly and bi-weekly mowing with sharp, commercial-grade blades. We cut to the correct height for Floratam St.&nbsp;Augustine and Bahia to keep roots healthy and prevent scalping.</p>
+          </div>
         </div>
+
         <div class="service-card">
-          <span class="service-card-icon">&#127807;</span>
-          <h3>Weed Eating</h3>
-          <p>Precision string trimming and vertical edging along driveways, curbs, sidewalks, and fence lines. Every visit leaves crisp, clean lines that meet HOA standards.</p>
+          <div class="service-card-img">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=70" alt="Weed eating and edging along a clean driveway" width="600" height="340" loading="lazy">
+          </div>
+          <div class="service-card-body">
+            <span class="service-card-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12"/><path d="M5 12H2a10 10 0 0 0 10 10"/><path d="M19 12h3a10 10 0 0 1-10 10"/><path d="M12 12a5 5 0 0 0 5-5c0-2-1-3.9-3-5-2-1.1-3.5-.5-4.5.5"/><path d="M12 12a5 5 0 0 1-5-5c0-2 1-3.9 3-5 2-1.1 3.5-.5 4.5.5"/></svg></span>
+            <h3>Weed Eating</h3>
+            <p>Precision string trimming and vertical edging along driveways, curbs, sidewalks, and fence lines. Every visit leaves crisp, clean lines that meet HOA standards.</p>
+          </div>
         </div>
+
         <div class="service-card">
-          <span class="service-card-icon">&#127795;</span>
-          <h3>Mulch Installation</h3>
-          <p>Fresh mulch in garden beds retains moisture, controls weeds, and dramatically boosts curb appeal. We install, edge, and define beds for a clean, finished look.</p>
+          <div class="service-card-img">
+            <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=600&q=70" alt="Fresh mulch installed in a garden bed" width="600" height="340" loading="lazy">
+          </div>
+          <div class="service-card-body">
+            <span class="service-card-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"/><path d="M3 9V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2"/><path d="M12 5V3"/><path d="M8 14h8"/><path d="M8 17h5"/></svg></span>
+            <h3>Mulch Installation</h3>
+            <p>Fresh mulch in garden beds retains moisture, controls weeds, and dramatically boosts curb appeal. We install, edge, and define beds for a clean, finished look.</p>
+          </div>
         </div>
+
         <div class="service-card">
-          <span class="service-card-icon">&#127919;</span>
-          <h3>Fertilizing</h3>
-          <p>Properly timed fertilization keeps your Pasco County lawn green and dense. We apply the right nutrients for Florida's subtropical season — spring green-up through summer growth.</p>
+          <div class="service-card-img">
+            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600&q=70" alt="Lush green fertilized lawn in Florida" width="600" height="340" loading="lazy">
+          </div>
+          <div class="service-card-body">
+            <span class="service-card-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/><path d="M20 2v4"/><path d="M22 4h-4"/></svg></span>
+            <h3>Fertilizing</h3>
+            <p>Properly timed fertilization keeps your Pasco County lawn green and dense. We apply the right nutrients for Florida's subtropical season — spring green-up through summer growth.</p>
+          </div>
         </div>
+
         <div class="service-card">
-          <span class="service-card-icon">&#128680;</span>
-          <h3>Brush Clearing</h3>
-          <p>Overgrowth, invasive weeds, and brushy areas cleared efficiently. Essential for larger lots, rural properties, and new-construction homes in San Antonio and Dade City.</p>
+          <div class="service-card-img">
+            <img src="https://images.unsplash.com/photo-1569025743873-ea3a9ade89f9?auto=format&fit=crop&w=600&q=70" alt="Brush and overgrowth clearing on a rural lot" width="600" height="340" loading="lazy">
+          </div>
+          <div class="service-card-body">
+            <span class="service-card-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4"/><path d="M16 6V4"/><rect x="2" y="6" width="20" height="14" rx="2"/><path d="M6 14c.5-1 1.5-2 3-2s2.5 1 3 2 1.5 2 3 2"/></svg></span>
+            <h3>Brush Clearing</h3>
+            <p>Overgrowth, invasive weeds, and brushy areas cleared efficiently. Essential for larger lots, rural properties, and new-construction homes in San Antonio and Dade City.</p>
+          </div>
         </div>
+
         <div class="service-card">
-          <span class="service-card-icon">&#9986;</span>
-          <h3>Hedge Trimming</h3>
-          <p>Hedges, shrubs, and ornamental plants shaped and trimmed to clean, geometric lines. We handle both routine maintenance and overgrown restoration cuts.</p>
+          <div class="service-card-img">
+            <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4aaae?auto=format&fit=crop&w=600&q=70" alt="Neatly trimmed hedges and shrubs" width="600" height="340" loading="lazy">
+          </div>
+          <div class="service-card-body">
+            <span class="service-card-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3 3 6l3 3 1.5-1.5L9 9l3-3-1.5-1.5L12 3Z"/><path d="m18 3-3 3 1.5 1.5L15 9l3 3 1.5-1.5L21 9l-3-3 1.5-1.5Z"/><path d="M12 12h.01"/><path d="M5 19h14"/><path d="M5 22h14"/><path d="M8 19v-7"/><path d="M16 19v-7"/><path d="M12 19v-4"/></svg></span>
+            <h3>Hedge Trimming</h3>
+            <p>Hedges, shrubs, and ornamental plants shaped and trimmed to clean, geometric lines. We handle both routine maintenance and overgrown restoration cuts.</p>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
+
+  <!-- IMAGE DIVIDER -->
+  <div class="img-divider" style="background-image: url('https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?auto=format&fit=crop&w=1600&q=75');" role="img" aria-label="Manicured lawn in a Florida neighborhood">
+    <div class="img-divider-inner">
+      <p class="img-divider-label">Serving East Pasco County Since 2018</p>
+      <h2>Your Lawn. <span>Our Standard.</span></h2>
+      <a href="tel:3522066203" class="btn-gold" aria-label="Call for a free estimate">Get a Free Estimate</a>
+    </div>
+  </div>
 
   <!-- SERVICE AREAS -->
   <section>
     <div class="container">
       <span class="section-label">Where We Work</span>
       <h2>Our <span>Service Areas</span></h2>
-      <p style="max-width: 640px; margin-bottom: 40px;">LawnWorx serves residential homeowners and HOA communities throughout East Pasco County, Florida.</p>
+      <p style="max-width:640px; margin-bottom:40px; margin-top:12px;">LawnWorx serves residential homeowners and HOA communities throughout East Pasco County, Florida.</p>
       <div class="community-cards">
         <div class="community-card">
-          <h4>Zephyrhills</h4>
-          <p>Silver Oaks, Forest Lake, Valleydale, Betmar Acres, Sandy Ridge, Saddle Creek, Crystal Springs area.</p>
-          <a href="zephyrhills.html" style="color:var(--gold); font-weight:700; font-size:0.85rem; text-decoration:none; text-transform:uppercase; letter-spacing:2px; display:inline-block; margin-top:12px;">See Services &rarr;</a>
+          <div class="community-card-img">
+            <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=500&q=65" alt="Homes in Zephyrhills FL" width="500" height="240" loading="lazy">
+          </div>
+          <div class="community-card-body">
+            <h4>Zephyrhills</h4>
+            <p>Silver Oaks, Forest Lake, Valleydale, Betmar Acres, Sandy Ridge, Saddle Creek, Crystal Springs area.</p>
+            <a href="zephyrhills.html" class="card-link">See Services &rarr;</a>
+          </div>
         </div>
         <div class="community-card">
-          <h4>Dade City</h4>
-          <p>Historic Downtown properties, Lake Iola, Pasadena Estates, rural estates on SR-52, Trilby area.</p>
-          <a href="dade-city.html" style="color:var(--gold); font-weight:700; font-size:0.85rem; text-decoration:none; text-transform:uppercase; letter-spacing:2px; display:inline-block; margin-top:12px;">See Services &rarr;</a>
+          <div class="community-card-img">
+            <img src="https://images.unsplash.com/photo-1560184897-ae75f418493e?auto=format&fit=crop&w=500&q=65" alt="Homes in Dade City FL" width="500" height="240" loading="lazy">
+          </div>
+          <div class="community-card-body">
+            <h4>Dade City</h4>
+            <p>Historic Downtown properties, Lake Iola, Pasadena Estates, rural estates on SR-52, Trilby area.</p>
+            <a href="dade-city.html" class="card-link">See Services &rarr;</a>
+          </div>
         </div>
         <div class="community-card">
-          <h4>San Antonio</h4>
-          <p>Mirada master-planned community, Cypress Creek, Pasco Trails, SR-52 corridor, Saint Leo area.</p>
-          <a href="san-antonio.html" style="color:var(--gold); font-weight:700; font-size:0.85rem; text-decoration:none; text-transform:uppercase; letter-spacing:2px; display:inline-block; margin-top:12px;">See Services &rarr;</a>
+          <div class="community-card-img">
+            <img src="https://images.unsplash.com/photo-1448630360428-65456885c650?auto=format&fit=crop&w=500&q=65" alt="Homes in San Antonio FL" width="500" height="240" loading="lazy">
+          </div>
+          <div class="community-card-body">
+            <h4>San Antonio</h4>
+            <p>Mirada master-planned community, Cypress Creek, Pasco Trails, SR-52 corridor, Saint Leo area.</p>
+            <a href="san-antonio.html" class="card-link">See Services &rarr;</a>
+          </div>
         </div>
         <div class="community-card">
-          <h4>Wesley Chapel</h4>
-          <p>Epperson, Wiregrass Ranch, New River, Watergrass, Seven Oaks, Persimmon Park, Quail Hollow.</p>
-          <a href="wesley-chapel.html" style="color:var(--gold); font-weight:700; font-size:0.85rem; text-decoration:none; text-transform:uppercase; letter-spacing:2px; display:inline-block; margin-top:12px;">See Services &rarr;</a>
+          <div class="community-card-img">
+            <img src="https://images.unsplash.com/photo-1549517045-bc93de075e53?auto=format&fit=crop&w=500&q=65" alt="Homes in Wesley Chapel FL" width="500" height="240" loading="lazy">
+          </div>
+          <div class="community-card-body">
+            <h4>Wesley Chapel</h4>
+            <p>Epperson, Wiregrass Ranch, New River, Watergrass, Seven Oaks, Persimmon Park, Quail Hollow.</p>
+            <a href="wesley-chapel.html" class="card-link">See Services &rarr;</a>
+          </div>
         </div>
         <div class="community-card">
-          <h4>Mirada</h4>
-          <p>2,300-acre master-planned community in San Antonio FL. Crystal Lagoon, MI Homes, Lennar, Taylor Morrison.</p>
-          <a href="mirada.html" style="color:var(--gold); font-weight:700; font-size:0.85rem; text-decoration:none; text-transform:uppercase; letter-spacing:2px; display:inline-block; margin-top:12px;">See Services &rarr;</a>
+          <div class="community-card-img">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=500&q=65" alt="Mirada master-planned community homes" width="500" height="240" loading="lazy">
+          </div>
+          <div class="community-card-body">
+            <h4>Mirada</h4>
+            <p>2,300-acre master-planned community in San Antonio&nbsp;FL. Crystal Lagoon, MI Homes, Lennar, Taylor Morrison.</p>
+            <a href="mirada.html" class="card-link">See Services &rarr;</a>
+          </div>
         </div>
         <div class="community-card">
-          <h4>Epperson</h4>
-          <p>Epperson Ranch &amp; Epperson North, Wesley Chapel FL. First Crystal Lagoon community in the USA.</p>
-          <a href="epperson.html" style="color:var(--gold); font-weight:700; font-size:0.85rem; text-decoration:none; text-transform:uppercase; letter-spacing:2px; display:inline-block; margin-top:12px;">See Services &rarr;</a>
+          <div class="community-card-img">
+            <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=500&q=65" alt="Epperson Ranch community homes in Wesley Chapel" width="500" height="240" loading="lazy">
+          </div>
+          <div class="community-card-body">
+            <h4>Epperson</h4>
+            <p>Epperson Ranch &amp; Epperson North, Wesley Chapel&nbsp;FL. First Crystal Lagoon community in the USA.</p>
+            <a href="epperson.html" class="card-link">See Services &rarr;</a>
+          </div>
         </div>
       </div>
     </div>
@@ -220,7 +322,7 @@
     <div class="container">
       <h2>Ready for the <span>Cleanest Lawn</span> on the Block?</h2>
       <p>Licensed, insured, and serving Pasco County since 2018. Call us today for a free quote.</p>
-      <a href="tel:3522066203" class="btn-gold-lg">Call Now: (352) 206-6203</a>
+      <a href="tel:3522066203" class="btn-gold-lg" aria-label="Call LawnWorx at (352) 206-6203">Call Now: (352)&nbsp;206-6203</a>
     </div>
   </div>
 
@@ -235,10 +337,10 @@
       <a href="wesley-chapel.html">Wesley Chapel</a>
       <a href="mirada.html">Mirada</a>
       <a href="epperson.html">Epperson</a>
-      
     </div>
-    <p>LawnWorx LLC &nbsp;|&nbsp; (352) 206-6203 &nbsp;|&nbsp; Licensed &amp; Insured &nbsp;|&nbsp; Serving Pasco County Since 2018</p>
+    <p>LawnWorx LLC &nbsp;|&nbsp; <a href="tel:3522066203" aria-label="Call (352) 206-6203">(352) 206-6203</a> &nbsp;|&nbsp; Licensed &amp; Insured &nbsp;|&nbsp; Serving Pasco County Since 2018</p>
     <p class="footer-service-areas">Zephyrhills &bull; Dade City &bull; San Antonio &bull; Wesley Chapel &bull; Mirada &bull; Epperson</p>
+    <p class="footer-legal">&copy; 2026 LawnWorx LLC. All rights reserved. Sister company: <a href="https://skidworx.com" style="color:var(--gold);">SkidWorx LLC</a></p>
   </footer>
 
   <script src="main.js"></script>
