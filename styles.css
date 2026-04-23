@@ -390,6 +390,14 @@ nav {
   font-weight: 700;
   margin-top: 18px;
   margin-bottom: 30px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  padding: 0 20px;
+  text-align: center;
+  max-width: 100%;
+}
+@media (max-width: 560px) {
+  .hero-tagline { letter-spacing: 1.5px; font-size: 0.82rem; }
 }
 .hero-cta { margin-top: 8px; }
 
@@ -457,16 +465,17 @@ nav {
   border-bottom: 1px solid rgba(200,150,15,0.15);
   font-size: 1rem;
   font-weight: 500;
-  display: flex;
+  display: grid;
+  grid-template-columns: 18px 1fr;
   gap: 10px;
-  align-items: center;
+  align-items: start;
 }
 .highlight-box li:last-child { border-bottom: none; }
 .highlight-box li::before {
-  content: '✔';
+  content: '\2713';
   color: var(--gold);
   font-weight: bold;
-  flex-shrink: 0;
+  line-height: 1.4;
 }
 
 /* --- Service Cards --- */
@@ -978,4 +987,66 @@ button:focus-visible {
   stroke: var(--gold);
   display: block;
   margin-bottom: 14px;
+}
+
+/* --- Homepage brand box (glass card matching SkidWorx style) --- */
+.brand-box {
+  background: rgba(10, 20, 10, 0.58);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  padding: 52px 72px 48px;
+  margin-bottom: 36px;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  max-width: 820px;
+  width: calc(100% - 48px);
+}
+.logo-wordmark {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  line-height: 1;
+}
+.logo-main {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(4.5rem, 11vw, 8.5rem);
+  color: var(--gold);
+  letter-spacing: 6px;
+  text-shadow: 0 0 40px rgba(200, 150, 15, 0.3);
+  line-height: 1;
+}
+.logo-llc {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+  color: var(--white);
+  letter-spacing: 3px;
+  opacity: 0.9;
+  line-height: 1;
+}
+.logo-services-bar {
+  font-size: clamp(0.68rem, 1.6vw, 0.88rem);
+  color: rgba(255, 255, 255, 0.65);
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 18px;
+  margin-top: 4px;
+  text-align: center;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+.logo-services-bar .dot {
+  color: var(--gold);
+  margin: 0 8px;
+  font-size: 0.6em;
+  vertical-align: middle;
+}
+@media (max-width: 768px) {
+  .brand-box { padding: 35px 28px; }
+  .logo-main { letter-spacing: 3px; }
+  .hero { background-attachment: scroll !important; }
 }
