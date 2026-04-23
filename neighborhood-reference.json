@@ -1,0 +1,169 @@
+{
+  "project": "LawnWorx neighborhood style references",
+  "last_updated": "2026-04-23",
+  "pages": {
+    "zephyrhills": {
+      "style_summary": "Established Florida single-family homes, cottages, and active-adult influence with simpler lawns and modest suburban streetscapes.",
+      "areas": [
+        {
+          "name": "Silver Oaks",
+          "photos": [
+            "http://googleusercontent.com/image_collection/image_retrieval/8710780768655520229_0",
+            "http://googleusercontent.com/image_collection/image_retrieval/8710780768655520229_1",
+            "http://googleusercontent.com/image_collection/image_retrieval/8710780768655520229_2",
+            "http://googleusercontent.com/image_collection/image_retrieval/8710780768655520229_3",
+            "http://googleusercontent.com/image_collection/image_retrieval/8710780768655520229_4",
+            "http://googleusercontent.com/image_collection/image_retrieval/8710780768655520229_5"
+          ]
+        },
+        {
+          "name": "Forest Lake",
+          "photos": [
+            "http://googleusercontent.com/image_collection/image_retrieval/11993017275107066768_0",
+            "http://googleusercontent.com/image_collection/image_retrieval/11993017275107066768_1",
+            "http://googleusercontent.com/image_collection/image_retrieval/11993017275107066768_2",
+            "http://googleusercontent.com/image_collection/image_retrieval/11993017275107066768_3",
+            "http://googleusercontent.com/image_collection/image_retrieval/11993017275107066768_4",
+            "http://googleusercontent.com/image_collection/image_retrieval/11993017275107066768_5"
+          ]
+        },
+        {
+          "name": "Valleydale",
+          "photos": [
+            "http://googleusercontent.com/image_collection/image_retrieval/3498608620009513213_0",
+            "http://googleusercontent.com/image_collection/image_retrieval/3498608620009513213_1",
+            "http://googleusercontent.com/image_collection/image_retrieval/3498608620009513213_2",
+            "http://googleusercontent.com/image_collection/image_retrieval/3498608620009513213_3",
+            "http://googleusercontent.com/image_collection/image_retrieval/3498608620009513213_4",
+            "http://googleusercontent.com/image_collection/image_retrieval/3498608620009513213_5"
+          ]
+        }
+      ]
+    },
+    "dade_city": {
+      "style_summary": "Historic character, ranch-style homes, and larger tree-lined properties.",
+      "areas": [
+        {
+          "name": "Historic Downtown",
+          "photos": [
+            "http://googleusercontent.com/image_collection/image_retrieval/4760245952690703412_0",
+            "http://googleusercontent.com/image_collection/image_retrieval/4760245952690703412_1",
+            "http://googleusercontent.com/image_collection/image_retrieval/4760245952690703412_2",
+            "http://googleusercontent.com/image_collection/image_retrieval/4760245952690703412_3",
+            "http://googleusercontent.com/image_collection/image_retrieval/4760245952690703412_4",
+            "http://googleusercontent.com/image_collection/image_retrieval/4760245952690703412_5"
+          ]
+        },
+        {
+          "name": "Pasadena Estates",
+          "photos": [
+            "http://googleusercontent.com/image_collection/image_retrieval/4563284706091040248_0",
+            "http://googleusercontent.com/image_collection/image_retrieval/4563284706091040248_1",
+            "http://googleusercontent.com/image_collection/image_retrieval/4563284706091040248_2",
+            "http://googleusercontent.com/image_collection/image_retrieval/4563284706091040248_3",
+            "http://googleusercontent.com/image_collection/image_retrieval/4563284706091040248_4",
+            "http://googleusercontent.com/image_collection/image_retrieval/4563284706091040248_5"
+          ]
+        },
+        {
+          "name": "Lake Jovita",
+          "photos": [
+            "http://googleusercontent.com/image_collection/image_retrieval/11354824086940020049_0",
+            "http://googleusercontent.com/image_collection/image_retrieval/11354824086940020049_1",
+            "http://googleusercontent.com/image_collection/image_retrieval/11354824086940020049_2",
+            "http://googleusercontent.com/image_collection/image_retrieval/11354824086940020049_3",
+            "http://googleusercontent.com/image_collection/image_retrieval/11354824086940020049_4",
+            "http://googleusercontent.com/image_collection/image_retrieval/11354824086940020049_5"
+          ]
+        }
+      ]
+    },
+    "san_antonio": {
+      "style_summary": "Rural Florida feel with larger yards and custom ranch influences, including Mirada's massive new expansion.",
+      "areas": [
+        {
+          "name": "Mirada",
+          "photos": [
+            "http://googleusercontent.com/image_collection/image_retrieval/5293001782633961467_0",
+            "http://googleusercontent.com/image_collection/image_retrieval/5293001782633961467_1",
+            "http://googleusercontent.com/image_collection/image_retrieval/5293001782633961467_2",
+            "http://googleusercontent.com/image_collection/image_retrieval/5293001782633961467_3",
+            "http://googleusercontent.com/image_collection/image_retrieval/5293001782633961467_4",
+            "http://googleusercontent.com/image_collection/image_retrieval/5293001782633961467_5"
+          ]
+        },
+        {
+          "name": "Pasco Trails",
+          "photos": [
+            "http://googleusercontent.com/image_collection/image_retrieval/3785085435119722750_0",
+            "http://googleusercontent.com/image_collection/image_retrieval/3785085435119722750_1",
+            "http://googleusercontent.com/image_collection/image_retrieval/3785085435119722750_2",
+            "http://googleusercontent.com/image_collection/image_retrieval/3785085435119722750_3",
+            "http://googleusercontent.com/image_collection/image_retrieval/3785085435119722750_4",
+            "http://googleusercontent.com/image_collection/image_retrieval/3785085435119722750_5"
+          ]
+        },
+        {
+          "name": "Saint Leo",
+          "photos": [
+            "http://googleusercontent.com/image_collection/image_retrieval/13262286571925697617_0",
+            "http://googleusercontent.com/image_collection/image_retrieval/13262286571925697617_1",
+            "http://googleusercontent.com/image_collection/image_retrieval/13262286571925697617_2",
+            "http://googleusercontent.com/image_collection/image_retrieval/13262286571925697617_3",
+            "http://googleusercontent.com/image_collection/image_retrieval/13262286571925697617_4",
+            "http://googleusercontent.com/image_collection/image_retrieval/13262286571925697617_5"
+          ]
+        }
+      ]
+    },
+    "wesley_chapel": {
+      "style_summary": "Modern master-planned communities, upscale architecture, and strong HOA landscaping patterns.",
+      "areas": [
+        {
+          "name": "Epperson",
+          "photos": [
+            "http://googleusercontent.com/image_collection/image_retrieval/5856859765757648467_0",
+            "http://googleusercontent.com/image_collection/image_retrieval/5856859765757648467_1",
+            "http://googleusercontent.com/image_collection/image_retrieval/5856859765757648467_2",
+            "http://googleusercontent.com/image_collection/image_retrieval/5856859765757648467_3",
+            "http://googleusercontent.com/image_collection/image_retrieval/5856859765757648467_4",
+            "http://googleusercontent.com/image_collection/image_retrieval/5856859765757648467_5"
+          ]
+        },
+        {
+          "name": "Wiregrass Ranch",
+          "photos": [
+            "http://googleusercontent.com/image_collection/image_retrieval/3785085435119722697_0",
+            "http://googleusercontent.com/image_collection/image_retrieval/3785085435119722697_1",
+            "http://googleusercontent.com/image_collection/image_retrieval/3785085435119722697_2",
+            "http://googleusercontent.com/image_collection/image_retrieval/3785085435119722697_3",
+            "http://googleusercontent.com/image_collection/image_retrieval/3785085435119722697_4",
+            "http://googleusercontent.com/image_collection/image_retrieval/3785085435119722697_5"
+          ]
+        },
+        {
+          "name": "Seven Oaks",
+          "photos": [
+            "http://googleusercontent.com/image_collection/image_retrieval/920020689256149437_0",
+            "http://googleusercontent.com/image_collection/image_retrieval/920020689256149437_1",
+            "http://googleusercontent.com/image_collection/image_retrieval/920020689256149437_2",
+            "http://googleusercontent.com/image_collection/image_retrieval/920020689256149437_3",
+            "http://googleusercontent.com/image_collection/image_retrieval/920020689256149437_4",
+            "http://googleusercontent.com/image_collection/image_retrieval/920020689256149437_5"
+          ]
+        },
+        {
+          "name": "Watergrass",
+          "photos": [
+            "http://googleusercontent.com/image_collection/image_retrieval/4563284706091038458_0",
+            "http://googleusercontent.com/image_collection/image_retrieval/4563284706091038458_1",
+            "http://googleusercontent.com/image_collection/image_retrieval/4563284706091038458_2",
+            "http://googleusercontent.com/image_collection/image_retrieval/4563284706091038458_3",
+            "http://googleusercontent.com/image_collection/image_retrieval/4563284706091038458_4",
+            "http://googleusercontent.com/image_collection/image_retrieval/4563284706091038458_5"
+          ]
+        }
+      ]
+    }
+  }
+}

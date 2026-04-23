@@ -403,15 +403,19 @@ nav {
 
 /* Homepage hero — logo variant */
 .hero-logo-wrap {
-  background: rgba(255,255,255,0.1);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-radius: 20px;
-  padding: 32px 56px;
-  border: 1px solid rgba(255,255,255,0.2);
+  background: linear-gradient(180deg, rgba(255,255,255,0.16) 0%, rgba(255,255,255,0.08) 100%);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-radius: 24px;
+  padding: 28px 44px 24px;
+  border: 1px solid rgba(255,255,255,0.22);
   box-shadow: var(--shadow-lg);
   margin-bottom: 30px;
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(920px, calc(100vw - 48px));
+  max-width: 920px;
 }
 .hero-logo-wordmark {
   display: flex;
@@ -453,9 +457,11 @@ nav {
 }
 .hero-logo-wrap img {
   display: block;
-  width: 380px;
-  max-width: 72vw;
+  width: min(780px, 100%);
+  max-width: 100%;
   height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.18));
 }
 
 /* --- Review Strip --- */
@@ -1084,7 +1090,11 @@ button:focus-visible {
   vertical-align: middle;
 }
 @media (max-width: 768px) {
-  .hero-logo-wrap { padding: 30px 22px; }
+  .hero-logo-wrap {
+    width: min(100%, calc(100vw - 32px));
+    padding: 22px 18px 20px;
+    border-radius: 18px;
+  }
   .hero-logo-wordmark {
     flex-direction: column;
     gap: 4px;
