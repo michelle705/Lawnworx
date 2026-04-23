@@ -407,15 +407,15 @@ nav {
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   border-radius: 24px;
-  padding: 28px 44px 24px;
+  padding: 18px 52px 18px;
   border: 1px solid rgba(255,255,255,0.22);
   box-shadow: var(--shadow-lg);
   margin-bottom: 30px;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  width: min(920px, calc(100vw - 48px));
-  max-width: 920px;
+  width: min(960px, calc(100vw - 48px));
+  max-width: 960px;
 }
 .hero-logo-wordmark {
   display: flex;
@@ -457,11 +457,12 @@ nav {
 }
 .hero-logo-wrap img {
   display: block;
-  width: min(780px, 100%);
-  max-width: 100%;
+  width: min(980px, 128%);
+  max-width: none;
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.18));
+  margin: -96px -118px -106px;
 }
 
 /* --- Review Strip --- */
@@ -1092,8 +1093,12 @@ button:focus-visible {
 @media (max-width: 768px) {
   .hero-logo-wrap {
     width: min(100%, calc(100vw - 32px));
-    padding: 22px 18px 20px;
+    padding: 14px 20px 14px;
     border-radius: 18px;
+  }
+  .hero-logo-wrap img {
+    width: min(760px, 148%);
+    margin: -62px -64px -74px;
   }
   .hero-logo-wordmark {
     flex-direction: column;
