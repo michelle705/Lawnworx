@@ -413,6 +413,44 @@ nav {
   margin-bottom: 30px;
   display: inline-block;
 }
+.hero-logo-wordmark {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 10px;
+  line-height: 1;
+}
+.hero-logo-main {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(4.25rem, 10vw, 7.5rem);
+  color: var(--gold);
+  letter-spacing: 6px;
+  text-shadow: 0 0 40px rgba(200, 150, 15, 0.3);
+}
+.hero-logo-llc {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(1.75rem, 4vw, 3.2rem);
+  color: var(--white);
+  letter-spacing: 3px;
+  opacity: 0.92;
+}
+.hero-logo-services {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,0.14);
+  text-align: center;
+  font-size: clamp(0.7rem, 1.6vw, 0.9rem);
+  letter-spacing: 1.4px;
+  color: rgba(255,255,255,0.72);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.hero-logo-services .dot {
+  color: var(--gold);
+  margin: 0 8px;
+  font-size: 0.7em;
+  vertical-align: middle;
+}
 .hero-logo-wrap img {
   display: block;
   width: 380px;
@@ -1046,6 +1084,17 @@ button:focus-visible {
   vertical-align: middle;
 }
 @media (max-width: 768px) {
+  .hero-logo-wrap { padding: 30px 22px; }
+  .hero-logo-wordmark {
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+  }
+  .hero-logo-main { letter-spacing: 3px; }
+  .hero-logo-services {
+    line-height: 1.8;
+    letter-spacing: 1px;
+  }
   .brand-box { padding: 35px 28px; }
   .logo-main { letter-spacing: 3px; }
   .hero { background-attachment: scroll !important; }
