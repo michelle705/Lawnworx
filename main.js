@@ -5,12 +5,14 @@
   if (hamburger && navMobile) {
     hamburger.addEventListener('click', function () {
       const isOpen = navMobile.classList.toggle('open');
+      hamburger.classList.toggle('open', isOpen);
       hamburger.setAttribute('aria-expanded', isOpen);
     });
     // Close mobile nav when a link is tapped
     navMobile.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
         navMobile.classList.remove('open');
+        hamburger.classList.remove('open');
         hamburger.setAttribute('aria-expanded', 'false');
       });
     });
